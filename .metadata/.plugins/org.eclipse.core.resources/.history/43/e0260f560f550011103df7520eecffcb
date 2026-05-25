@@ -1,0 +1,19 @@
+package com.rays.ioc;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CompanyTest {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		ApplicationContext con=new ClassPathXmlApplicationContext("Company.xml");
+		
+		Company com=con.getBean("com",Company.class);
+		
+		
+	}
+
+}

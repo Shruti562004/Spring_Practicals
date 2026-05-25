@@ -1,0 +1,9 @@
+package com.rays.test;
+
+public class Marksheet {
+	
+	private String name;
+	private int english;
+	private int hindi;
+
+}

@@ -1,0 +1,41 @@
+package com.rays.test;
+
+import org.springframework.stereotype.Component;
+
+@Component("testUserService")
+public class TestUserService {
+
+	@Autowired
+	public UserService service = null;
+
+	public static void main(String[] args) throws Exception {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		TestUserService test = (TestUserService) context.getBean("testUserService");
+
+	test.testAdd();
+//		test.testDelete();
+//		test.testUpdate();
+//		test.testFindByPk();
+//		test.testFindByLogin();
+//		test.authenticate();
+		//test.search();
+
+	}
+	
+	
+	public void testAdd() {
+
+		UserDTO dto = new UserDTO();
+		dto.setFirstName("Kamal");
+		dto.setLastName("Gour");
+		dto.setLogin("kamal@gmail.com");
+		dto.setPassword("kamal23");
+
+		long i = service.add(dto);
+
+		System.out.println("Data Inserted... = " + i);
+
+	}
+

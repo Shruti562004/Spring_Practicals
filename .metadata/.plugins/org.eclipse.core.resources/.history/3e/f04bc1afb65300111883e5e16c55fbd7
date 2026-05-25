@@ -1,0 +1,14 @@
+package com.rays.test;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+
+public class MarksheetTest {
+	
+	public static void main(String[] args) {
+		
+		
+		BeanFactory fact=new XmlBeanFactory(new ClassPathResource("Marksheet.xml"));
+	}
+
+}

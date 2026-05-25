@@ -1,0 +1,27 @@
+package com.rays.ioc;
+
+public class Company {
+	
+	private String name;
+	private int number;
+	private int totalEmp ;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	public int getTotalEmp() {
+		return totalEmp;
+	}
+	public void setTotalEmp(int totalEmp) {
+		this.totalEmp = totalEmp;
+	}
+
+}

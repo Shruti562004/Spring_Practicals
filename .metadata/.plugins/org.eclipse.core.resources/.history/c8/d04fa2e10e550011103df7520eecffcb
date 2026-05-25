@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	
+	
+	
+	
+	<bean id="emp" class="com.rays.ioc.Employee">
+	<property name="name" value="Chinu"></property>
+	<property name="age"  value="21"></property>
+
+	
+	
+	</bean>
+		<bean id="dep" class="com.rays.ioc.Department">
+	<property name="name" value="Chinu"></property>
+	<property name="age"  value="21"></property>
+
+	
+	
+	</bean>
+	
+	<bean>
+	<property name="depName" value="CSE"></property>
+	<property name="salary"  value="2100000"></property>
+
+
+	</bean>
+	
+	
+		<bean id="com" class="com.rays.ioc.Company">
+		<property name="Employee" ref="emp"></property>
+	<property name="Department"  ref="dep"></property>
+	
+	
+	
+	</bean>
+	</beans>

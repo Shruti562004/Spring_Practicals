@@ -1,0 +1,23 @@
+package com.rays.service;
+
+import com.rays.dto.UserDTO;
+
+public class UserService {
+	
+
+		@Autowired
+		private UserDAO dao;
+
+		@Transactional(propagation = Propagation.REQUIRED)
+		public long add(UserDTO dto) {
+
+			UserDTO existDto = findByLogin(dto.getLogin());
+
+			if (existDto != null) {
+				throw new RuntimeException("login already exist");
+			}
+
+			long i = dao.add(dto);
+			return i;
+		}
+}
