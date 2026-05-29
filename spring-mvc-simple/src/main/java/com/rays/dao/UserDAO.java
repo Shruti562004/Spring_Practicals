@@ -85,8 +85,16 @@ public class UserDAO {
 		Criteria criteria = session.createCriteria(UserDTO.class);
 
 		if (dto != null) {
+			
+			
+			if (dto.getId() != null && dto.getId() > 0) {
+				criteria.add(Restrictions.eq("id", dto.getId()));
+			}
 			if (dto.getFirstName() != null && dto.getFirstName().length() > 0) {
 				criteria.add(Restrictions.like("firstName", dto.getFirstName() + "%"));
+			}
+			if (dto.getDob() != null) {
+				criteria.add(Restrictions.like("dob", dto.getDob()));
 			}
 		}
 

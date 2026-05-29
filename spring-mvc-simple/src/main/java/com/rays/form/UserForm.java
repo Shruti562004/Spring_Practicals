@@ -24,6 +24,26 @@ public class UserForm {
 	@NotEmpty(message = "address is required")
 	private String address = null;
 
+	private int pageNo;
+
+	public int getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	private Long[] ids;
+
+	public Long[] getIds() {
+		return ids;
+	}
+
+	public void setIds(Long[] ids) {
+		this.ids = ids;
+	}
+
 	public Long getId() {
 		return id;
 	}

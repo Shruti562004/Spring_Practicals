@@ -45,18 +45,18 @@ public class LoginCtl {
 		}
 
 		UserDTO dto = service.authenticate(form.getLogin(), form.getPassword());
-		
-		System.out.println(dto.getFirstName());
-		
+
+		//System.out.println(dto.getFirstName());
+
 		if (dto != null) {
-		
+
 			session.setAttribute("user", dto);
 			return "redirect:/Welcome";
-	
+
 		} else {
 			model.addAttribute("msg", "invalid login or passwored");
 		}
-	
+
 		return "LoginView";
 
 	}
